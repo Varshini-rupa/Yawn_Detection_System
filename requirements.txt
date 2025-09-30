@@ -1,0 +1,10 @@
+numpy
+opencv-python
+mediapipe
+torch
+torchvision
+pillow
+matplotlib
+playsound
+pafy
+youtube-dl
