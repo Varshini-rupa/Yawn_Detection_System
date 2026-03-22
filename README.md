@@ -229,11 +229,10 @@ This project is one module within a larger **Advanced Driver Assistance System (
 
 ---
 
-## 👤 Author
+## Team
 
-**Naga Sai Trinayacha Luvadi**  
-B.Tech — [Your Branch]  
-[Your College Name]
+**Varshini Sanka,Naga Sai Trinaya chaluvadi**  
+B.Tech — CSE(AI & ML) 
 
 ---
 
