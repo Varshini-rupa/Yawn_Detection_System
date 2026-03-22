@@ -29,7 +29,7 @@ Yawn-Detection-System/
 │   └── yolo_test.py             # Quick test script using YOLO on webcam
 │
 ├── models/
-│   └── yolo_yawn_model.pt       # Custom-trained YOLOv8 model weights
+│   └── yolo_yawn_model.pt       # ⚠️ Not included — see note below
 │
 ├── assets/
 │   └── buzzer.mp3               # Alert sound for drowsiness warning
@@ -120,6 +120,34 @@ ultralytics
 > model = YOLO('models/yolo_yawn_model.pt')
 > ```
 
+> 📌 **Model Weights Not Included:** The custom trained model file `yolo_yawn_model.pt` is not included in this repository. To use the YOLO approach, you will need to retrain the model using a yawn dataset (available on [Roboflow Universe](https://universe.roboflow.com) or [Kaggle](https://www.kaggle.com)). See the **Retraining the Model** section below.
+>
+> In the meantime, the **Mediapipe approach (`main.py`) works fully without any model file** and is ready to run out of the box.
+
+---
+
+## 🔁 Retraining the YOLO Model
+
+If you want to use the YOLO-based detection, follow these steps to train your own model:
+
+**1. Get a yawn dataset:**
+- Go to [Roboflow Universe](https://universe.roboflow.com) → search `yawn detection` → download in **YOLOv8 format**
+- Or search on [Kaggle](https://www.kaggle.com) for yawn datasets
+
+**2. Train the model:**
+```python
+from ultralytics import YOLO
+
+model = YOLO('yolov8n.pt')  # starts from pretrained YOLOv8 nano base
+model.train(data='dataset/data.yaml', epochs=50, imgsz=640)
+```
+
+**3. Use the trained weights:**
+The best trained model will be saved at `runs/train/weights/best.pt`. Copy it to the `models/` folder:
+```bash
+cp runs/train/weights/best.pt models/yolo_yawn_model.pt
+```
+
 ---
 
 ## ⚙️ Installation & Setup
@@ -201,11 +229,11 @@ This project is one module within a larger **Advanced Driver Assistance System (
 
 ---
 
-## Team 
+## 👤 Author
 
-**Varshini Sanka,Naga Sai Trinaya Chaluvadi**  
-B.Tech — CSE(AI& ML) 
-
+**Naga Sai Trinayacha Luvadi**  
+B.Tech — [Your Branch]  
+[Your College Name]
 
 ---
 
