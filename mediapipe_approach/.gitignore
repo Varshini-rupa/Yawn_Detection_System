@@ -1,1 +1,28 @@
+# Virtual environment — NEVER push this
+venv/
+env/
+.venv/
 
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# YOLO results
+runs/
+result.jpg
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Model weights (optional — if large, use Git LFS or exclude)
+# *.pt
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
