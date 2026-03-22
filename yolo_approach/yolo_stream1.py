@@ -4,7 +4,7 @@ import winsound
 from ultralytics import YOLO
 
 # Load your trained YOLOv8 model
-model = YOLO(r'C:\Users\trina\OneDrive\Desktop\YAWN\yolo_yawn_model.pt')  # Update path if needed
+model = YOLO('models/yolo_yawn_model.pt') # Update path if needed
 
 # Initialize webcam
 cap = cv2.VideoCapture(0)
